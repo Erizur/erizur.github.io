@@ -1,16 +1,65 @@
+html {
+    --mframe-size: 1000px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
+    image-rendering: optimizeSpeed;
     background-image: url("../img/zyde_lighttile.png");
     background-repeat: repeat;
 }
 
 body[dark=""] {
+    image-rendering: optimizeSpeed;
     background-image: url("../img/zyde_darktile.png");
     background-repeat: repeat;
 }
 
+#sidebarlinks {
+    display:grid;
+    margin: 1px;
+    padding-left: 5px;
+    list-style-type: none;
+}
+
+#sidebarlinks > li  {
+    margin-left: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#sidebarlinks > b  {
+    padding: 10px 0px;
+    font-size: large;
+}
+
 #mainframe {
-    padding: 5px;
+    display: flex;
+    margin: auto;
+    margin-top: 128px;
+    text-align: center;
+    width: var(--mframe-size);
+    min-height: 50%;
+
     background-color: white;
-    width: 500px;
-    height: auto;
+}
+
+#sidebar {
+    text-align: left;
+    padding: 5px;
+    width: 25%;
+
+    background-blend-mode: darken;
+    background-color: whitesmoke;
+}
+
+#maincontainer {
+    text-align: left;
+    vertical-align: middle;
+    padding: 5px;
+    width:75%;
+}
+
+md-block > {
+    margin: 5px;
 }
