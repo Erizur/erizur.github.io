@@ -1,14 +1,15 @@
-body[dark="false"] {
+body {
     background-image: url("../img/zyde_lighttile.png");
     background-repeat: repeat;
 }
 
-body[dark="false"] {
+body[dark=""] {
     background-image: url("../img/zyde_darktile.png");
     background-repeat: repeat;
 }
 
 #mainframe {
+    padding: 5px;
     background-color: white;
     width: 500px;
     height: auto;
