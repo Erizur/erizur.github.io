@@ -33,10 +33,31 @@ body[dark=""] {
     font-size: large;
 }
 
-#mainframe {
-    display: flex;
-    margin: auto;
+#page {
     margin-top: 128px;
+}
+
+#topfront {
+    display:flex;
+}
+
+#headertitle {
+    font-size: 42px;
+    font-style: italic;
+    font-weight: bold;
+    user-select: none;
+    margin-bottom: 5px;
+    margin-top: auto;
+}
+
+#front-silly {
+    display:block;
+    margin-left: 25%;
+}
+
+#mainframe {
+    margin: auto;
+    display: flex;
     text-align: center;
     width: var(--mframe-size);
     min-height: 50%;
@@ -60,6 +81,6 @@ body[dark=""] {
     width:75%;
 }
 
-md-block > {
+md-block > * {
     margin: 5px;
 }
