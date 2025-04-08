@@ -1,5 +1,4 @@
 html {
-    --mframe-size: 1000px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -9,36 +8,32 @@ body {
     background-repeat: repeat;
 }
 
-body[dark=""] {
+body[dark] {
     image-rendering: optimizeSpeed;
     background-image: url("../img/zyde_darktile.png");
     background-repeat: repeat;
 }
 
 #sidebarlinks {
-    display:grid;
-    margin: 1px;
+    margin: 2px;
     padding-left: 5px;
     list-style-type: none;
 }
 
 #sidebarlinks > li  {
-    margin-left: 5px;
+    margin-left: 8px;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
 #sidebarlinks > b  {
-    padding: 10px 0px;
+    display: block;
+    padding: 5px 0px;
     font-size: large;
 }
 
 #page {
-    margin-top: 128px;
-}
-
-#topfront {
-    display:flex;
+    margin-top: 32px;
 }
 
 #headertitle {
@@ -50,19 +45,29 @@ body[dark=""] {
     margin-top: auto;
 }
 
-#front-silly {
-    display:block;
-    margin-left: 25%;
+#topfront {
+    display: block;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+#front-banner {
+    margin-left: 50px;
+    height: 150px;
+
+    image-rendering: optimizeSpeed;
+}
+
+body[dark] #front-banner {
+    content: url("../img/banner_dark.png");
 }
 
 #mainframe {
     margin: auto;
     display: flex;
     text-align: center;
-    width: var(--mframe-size);
+    width: 1000px;
     min-height: 50%;
-
-    background-color: white;
 }
 
 #sidebar {
@@ -79,8 +84,19 @@ body[dark=""] {
     vertical-align: middle;
     padding: 5px;
     width:75%;
+    background-color: white;
 }
 
-md-block > * {
+#maincontainer > * {
+    margin: 5px;
+}
+
+#maincontainer > p {
+    padding-bottom: 5px;
+}
+
+.boxed {
+    border: 1px solid black;
+    box-shadow: black 3px 3px;
     margin: 5px;
 }
