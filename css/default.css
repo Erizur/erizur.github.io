@@ -48,7 +48,6 @@ body[dark] {
 #topfront {
     display: block;
     margin: 0 auto;
-    width: 1000px;
 }
 
 #front-banner {
@@ -66,7 +65,6 @@ body[dark] #front-banner {
     margin: auto;
     display: flex;
     text-align: center;
-    width: 1000px;
     min-height: 50%;
 }
 
@@ -95,8 +93,39 @@ body[dark] #front-banner {
     padding-bottom: 5px;
 }
 
+#bottomfront {
+    height: 50px;
+    margin: auto;
+
+    background-color: white;
+}
+
 .boxed {
     border: 1px solid black;
     box-shadow: black 3px 3px;
     margin: 5px;
+}
+
+.resizable-panel {
+    width: 1000px;
+}
+
+@media screen and (max-width: 1000px) {
+    .resizable-panel {
+        width: 500px;
+    }
+
+    #front-banner {
+        width: 70%;
+        height: 70%;
+    }
+
+    #front-silly {
+        width: 15%;
+        height: 15%;
+    }
+}
+
+.img-right {
+    float: right;
 }
