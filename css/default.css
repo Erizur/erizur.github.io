@@ -132,8 +132,10 @@ body[dark] {
 }
 
 #sunmoon {
-    content: url("../img/sun.png");
-    object-fit: scale-down;
+    background-image: url("../img/sun.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
 }
 
 /* DARK MODE */ 
@@ -159,5 +161,5 @@ body[dark] #front-banner {
 }
 
 body[dark] #sunmoon {
-    content: url("../img/moon.png");
+    background-image: url("../img/moon.png");
 }
