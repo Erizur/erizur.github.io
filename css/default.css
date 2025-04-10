@@ -15,7 +15,7 @@ body[dark] {
 }
 
 #sidebarlinks {
-    margin: 2px;
+    margin: 0;
     padding-left: 5px;
     list-style-type: none;
 }
@@ -53,16 +53,10 @@ body[dark] {
 #front-banner {
     margin-left: 50px;
     height: 150px;
-
-    image-rendering: optimizeSpeed;
-}
-
-body[dark] #front-banner {
-    content: url("../img/banner_dark.png");
 }
 
 #mainframe {
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     text-align: center;
     min-height: 50%;
@@ -72,9 +66,9 @@ body[dark] #front-banner {
     text-align: left;
     padding: 5px;
     width: 25%;
-
-    background-blend-mode: darken;
     background-color: whitesmoke;
+
+    overflow: hidden;
 }
 
 #maincontainer {
@@ -82,7 +76,6 @@ body[dark] #front-banner {
     vertical-align: middle;
     padding: 5px;
     width:75%;
-    background-color: white;
 }
 
 #maincontainer > * {
@@ -93,17 +86,21 @@ body[dark] #front-banner {
     padding-bottom: 5px;
 }
 
-#bottomfront {
-    height: 50px;
+#bottom {
     margin: auto;
+}
 
-    background-color: white;
+#bottomcontainer {
+    margin-top: 0;
+    height: 50px;
 }
 
 .boxed {
     border: 1px solid black;
     box-shadow: black 3px 3px;
     margin: 5px;
+
+    background-color: white;
 }
 
 .resizable-panel {
@@ -112,12 +109,13 @@ body[dark] #front-banner {
 
 @media screen and (max-width: 1000px) {
     .resizable-panel {
-        width: 500px;
+        width: 60%;
     }
 
     #front-banner {
         width: 70%;
         height: 70%;
+        margin-left: 8%;
     }
 
     #front-silly {
@@ -128,4 +126,38 @@ body[dark] #front-banner {
 
 .img-right {
     float: right;
+    width: inherit;
+    max-width: 100%;
+    height: auto;
+}
+
+#sunmoon {
+    content: url("../img/sun.png");
+    object-fit: scale-down;
+}
+
+/* DARK MODE */ 
+
+body[dark] #sidebar {
+    background-color: rgb(28, 28, 28);
+}
+
+body[dark] .boxed {
+    background-color: rgb(38, 38, 38);
+}
+
+body[dark] #sidebarlinks > b  {
+    color: white;
+}
+
+body[dark] #maincontainer > * {
+    color: white;
+}
+
+body[dark] #front-banner {
+    content: url("../img/banner_dark.png");
+}
+
+body[dark] #sunmoon {
+    content: url("../img/moon.png");
 }
