@@ -1,15 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    image-rendering: optimizeSpeed;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    
     background-image: url("../img/zyde_lighttile.png");
     background-repeat: repeat;
+    margin: 0; 
 }
 
 body[dark] {
-    image-rendering: optimizeSpeed;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    
     background-image: url("../img/zyde_darktile.png");
     background-repeat: repeat;
 }
@@ -34,6 +43,7 @@ body[dark] {
 
 #page {
     margin-top: 32px;
+    padding-bottom: 20px; 
 }
 
 #headertitle {
@@ -53,6 +63,7 @@ body[dark] {
 #front-banner {
     margin-left: 50px;
     height: 150px;
+    width: auto;
 }
 
 #mainframe {
@@ -67,7 +78,6 @@ body[dark] {
     padding: 5px;
     width: 25%;
     background-color: whitesmoke;
-
     overflow: hidden;
 }
 
@@ -75,7 +85,7 @@ body[dark] {
     text-align: left;
     vertical-align: middle;
     padding: 5px;
-    width:75%;
+    width: 75%;
 }
 
 #maincontainer > * {
@@ -93,34 +103,94 @@ body[dark] {
 #bottomcontainer {
     margin-top: 0;
     height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .boxed {
     border: 1px solid black;
     box-shadow: black 3px 3px;
     margin: 5px;
-
     background-color: white;
 }
 
 .resizable-panel {
-    width: 1000px;
+    max-width: 1000px; 
+    width: 95%;        
+    margin: 0 auto;    
 }
 
+/* fixes for big phones aka phablets or just tablets ing eneral */
 @media screen and (max-width: 1000px) {
-    .resizable-panel {
-        width: 60%;
+    
+    #topfront {
+        display: flex;           
+        flex-direction: row;     
+        align-items: center;    
+        justify-content: center; 
     }
 
     #front-banner {
-        width: 70%;
-        height: 70%;
-        margin-left: 8%;
+        width: 65%;       
+        height: auto;     
+        margin-left: 0;   
+        margin-right: 10px; 
     }
 
     #front-silly {
-        width: 15%;
-        height: 15%;
+        width: 15%;       
+        height: auto;     
+    }
+}
+
+/* PHONE fixes */
+@media screen and (max-width: 700px) {
+    
+    #topfront {
+        flex-direction: column; 
+    }
+
+    #front-banner {
+        width: 100%;        
+        margin-right: 0;    
+        margin-bottom: 10px; 
+    }
+
+    #front-silly {
+        width: 30%;         
+        margin: 0 auto;     
+    }
+
+    #mainframe {
+        flex-direction: column;
+    }
+
+    #sidebar, #maincontainer, #bottomcontainer {
+        width: auto; 
+        display: block;
+        margin: 5px 0; 
+    }
+
+    #sidebarlinks {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5px;
+    }
+
+    #sidebarlinks > li, #sidebarlinks > b {
+        margin: 5px 10px; 
+        display: inline-block;
+    }
+    
+    #sidebarlinks > b {
+        display: none;
+    }
+    
+    #bottomcontainer {
+        display: flex;
+        justify-content: flex-start; 
     }
 }
 
