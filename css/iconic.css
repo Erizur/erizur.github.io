@@ -1,0 +1,75 @@
+#sidebarlinks {
+    margin: 0;
+    padding-left: 5px;
+    list-style-type: none;
+}
+
+#sidebarlinks > li {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#sidebarlinks > li a {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    
+    font-size: x-large;
+    text-decoration: none;
+    color: black;
+    
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 2px 2px 0px black;
+    padding: 8px 12px;
+}
+
+#sidebarlinks > li a:hover {
+    background-color: #e0e0e0;
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0px black;
+}
+º
+#sidebarlinks > li a:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px black;
+}
+
+#sidebarlinks > b {
+    display: block;
+    text-align: center;
+    padding: 5px 0px;
+    font-size: large;
+}
+
+#sidebarlinks > li a::before {
+    content: "";
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+#sidebarlinks > li a[href="index.html"]::before { background-image: url('../img/home.png'); }
+#sidebarlinks > li a[href*="about.html"]::before { background-image: url('../img/me.png'); }
+#sidebarlinks > li a[href="blog.html"]::before { background-image: url('../img/blog.png'); }
+#sidebarlinks > li a[href*="works.html"]::before { background-image: url('../img/art.png'); }
+
+body[dark] #sidebarlinks > b  {
+    color: white;
+}
+
+body[dark] #sidebarlinks > li a {
+    background-color: rgb(38, 38, 38);
+    color: white;
+}
+
+body[dark] #sidebarlinks > li a:hover {
+    background-color: rgb(60, 60, 60);
+}

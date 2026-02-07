@@ -14,24 +14,6 @@ body[dark] {
     background-repeat: repeat;
 }
 
-#sidebarlinks {
-    margin: 0;
-    padding-left: 5px;
-    list-style-type: none;
-}
-
-#sidebarlinks > li  {
-    margin-left: 8px;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-#sidebarlinks > b  {
-    display: block;
-    padding: 5px 0px;
-    font-size: large;
-}
-
 #page {
     margin-top: 32px;
 }
@@ -86,6 +68,24 @@ body[dark] {
     padding-bottom: 5px;
 }
 
+#site-bouts {
+    overflow: auto; 
+    margin-bottom: 20px;
+}
+
+#indx-misc {
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+}
+
+#guestbook {
+    border: 1px solid black;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
 #bottom {
     margin: auto;
 }
@@ -109,7 +109,7 @@ body[dark] {
 
 @media screen and (max-width: 1000px) {
     .resizable-panel {
-        width: 60%;
+        width: 100%;
     }
 
     #front-banner {
@@ -124,10 +124,62 @@ body[dark] {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .resizable-panel {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    #mainframe {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #sidebar, #maincontainer {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #topfront {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    #front-silly {
+        order: -1;
+        width: 40%;
+        height: auto;
+        margin-bottom: -20px;
+        z-index: 10;
+        position: relative;
+    }
+
+    #front-banner {
+        margin-left: 0;
+        width: 95%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .boxed {
+        margin: 0 0 10px 0;
+        width: 100%;
+    }
+
+    .img-right {
+        float: none;
+        display: block;
+        margin: 10px auto;
+        max-width: 100%;
+    }
+}
+
 .img-right {
     float: right;
-    width: inherit;
-    max-width: 100%;
+    margin-bottom: 5px;
+    width: auto;
     height: auto;
 }
 
@@ -148,10 +200,6 @@ body[dark] .boxed {
     background-color: rgb(38, 38, 38);
 }
 
-body[dark] #sidebarlinks > b  {
-    color: white;
-}
-
 body[dark] #maincontainer > * {
     color: white;
 }
@@ -162,4 +210,8 @@ body[dark] #front-banner {
 
 body[dark] #sunmoon {
     background-image: url("../img/moon.png");
+}
+
+body[dark] #guestbook {
+    filter: brightness(0.5) grayscale(0.5);
 }
