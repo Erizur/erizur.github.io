@@ -1,31 +1,21 @@
-* {
-    box-sizing: border-box;
-}
-
 html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    
+    image-rendering: optimizeSpeed;
     background-image: url("../img/zyde_lighttile.png");
     background-repeat: repeat;
-    margin: 0; 
 }
 
 body[dark] {
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    
+    image-rendering: optimizeSpeed;
     background-image: url("../img/zyde_darktile.png");
     background-repeat: repeat;
 }
 
 #page {
     margin-top: 32px;
-    padding-bottom: 20px; 
 }
 
 #headertitle {
@@ -45,7 +35,6 @@ body[dark] {
 #front-banner {
     margin-left: 50px;
     height: 150px;
-    width: auto;
 }
 
 #mainframe {
@@ -60,6 +49,7 @@ body[dark] {
     padding: 5px;
     width: 25%;
     background-color: whitesmoke;
+
     overflow: hidden;
 }
 
@@ -67,7 +57,7 @@ body[dark] {
     text-align: left;
     vertical-align: middle;
     padding: 5px;
-    width: 75%;
+    width:75%;
 }
 
 #maincontainer > * {
@@ -103,40 +93,34 @@ body[dark] {
 #bottomcontainer {
     margin-top: 0;
     height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
 }
 
 .boxed {
     border: 1px solid black;
     box-shadow: black 3px 3px;
     margin: 5px;
+
     background-color: white;
 }
 
 .resizable-panel {
-    max-width: 1000px; 
-    width: 95%;        
-    margin: 0 auto;    
+    width: 1000px;
 }
 
-/* fixes for big phones aka phablets or just tablets ing eneral */
 @media screen and (max-width: 1000px) {
     .resizable-panel {
         width: 100%;
     }
 
     #front-banner {
-        width: 65%;       
-        height: auto;     
-        margin-left: 0;   
-        margin-right: 10px; 
+        width: 70%;
+        height: 70%;
+        margin-left: 8%;
     }
 
     #front-silly {
-        width: 15%;       
-        height: auto;     
+        width: 15%;
+        height: 15%;
     }
 }
 
